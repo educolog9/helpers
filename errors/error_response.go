@@ -19,11 +19,11 @@ func NewErrorResponse(status int, message string, errors []string) ErrorResponse
 	}
 }
 
-func ReturnHTTPError(w http.ResponseWriter, message string) {
+func ReturnHTTPError(w http.ResponseWriter, messages []string) {
 	response := ErrorResponse{
 		Status:  http.StatusInternalServerError,
 		Message: "Internal Server Error",
-		Errors:  []string{message},
+		Errors:  messages,
 	}
 
 	jsonResponse, err := json.Marshal(response)
@@ -37,11 +37,11 @@ func ReturnHTTPError(w http.ResponseWriter, message string) {
 	w.Write(jsonResponse)
 }
 
-func ReturnBadRequestError(w http.ResponseWriter, message string) {
+func ReturnBadRequestError(w http.ResponseWriter, messages []string) {
 	response := ErrorResponse{
 		Status:  http.StatusBadRequest,
 		Message: "Bad Request",
-		Errors:  []string{message},
+		Errors:  messages,
 	}
 
 	jsonResponse, err := json.Marshal(response)
@@ -55,11 +55,11 @@ func ReturnBadRequestError(w http.ResponseWriter, message string) {
 	w.Write(jsonResponse)
 }
 
-func ReturnUnauthorizedError(w http.ResponseWriter, message string) {
+func ReturnUnauthorizedError(w http.ResponseWriter, messages []string) {
 	response := ErrorResponse{
 		Status:  http.StatusUnauthorized,
 		Message: "Unauthorized",
-		Errors:  []string{message},
+		Errors:  messages,
 	}
 
 	jsonResponse, err := json.Marshal(response)
@@ -73,11 +73,11 @@ func ReturnUnauthorizedError(w http.ResponseWriter, message string) {
 	w.Write(jsonResponse)
 }
 
-func ReturnNotFoundError(w http.ResponseWriter, message string) {
+func ReturnNotFoundError(w http.ResponseWriter, messages []string) {
 	response := ErrorResponse{
 		Status:  http.StatusNotFound,
 		Message: "Not Found",
-		Errors:  []string{message},
+		Errors:  messages,
 	}
 
 	jsonResponse, err := json.Marshal(response)
@@ -91,11 +91,11 @@ func ReturnNotFoundError(w http.ResponseWriter, message string) {
 	w.Write(jsonResponse)
 }
 
-func ReturnConflictError(w http.ResponseWriter, message string) {
+func ReturnConflictError(w http.ResponseWriter, messages []string) {
 	response := ErrorResponse{
 		Status:  http.StatusConflict,
 		Message: "Conflict",
-		Errors:  []string{message},
+		Errors:  messages,
 	}
 
 	jsonResponse, err := json.Marshal(response)
@@ -109,11 +109,11 @@ func ReturnConflictError(w http.ResponseWriter, message string) {
 	w.Write(jsonResponse)
 }
 
-func ReturnForbiddenError(w http.ResponseWriter, message string) {
+func ReturnForbiddenError(w http.ResponseWriter, messages []string) {
 	response := ErrorResponse{
 		Status:  http.StatusForbidden,
 		Message: "Forbidden",
-		Errors:  []string{message},
+		Errors:  messages,
 	}
 
 	jsonResponse, err := json.Marshal(response)
@@ -127,11 +127,11 @@ func ReturnForbiddenError(w http.ResponseWriter, message string) {
 	w.Write(jsonResponse)
 }
 
-func ReturnUnprocessableEntityError(w http.ResponseWriter, message string) {
+func ReturnUnprocessableEntityError(w http.ResponseWriter, messages []string) {
 	response := ErrorResponse{
 		Status:  http.StatusUnprocessableEntity,
 		Message: "Unprocessable Entity",
-		Errors:  []string{message},
+		Errors:  messages,
 	}
 
 	jsonResponse, err := json.Marshal(response)
