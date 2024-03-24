@@ -144,3 +144,21 @@ func ReturnUnprocessableEntityError(w http.ResponseWriter, messages []string) {
 	w.WriteHeader(http.StatusUnprocessableEntity)
 	w.Write(jsonResponse)
 }
+
+func ReturnMethodNotAllowedError(w http.ResponseWriter, messages []string) {
+	response := ErrorResponse{
+		Status:  http.StatusMethodNotAllowed,
+		Message: "Method Not Allowed",
+		Errors:  messages,
+	}
+
+	jsonResponse, err := json.Marshal(response)
+	if err != nil {
+		http.Error(w, "Error creating error response", http.StatusInternalServerError)
+		return
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusMethodNotAllowed)
+	w.Write(jsonResponse)
+}
