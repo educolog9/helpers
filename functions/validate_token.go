@@ -25,7 +25,7 @@ func ValidateToken(r *http.Request, w http.ResponseWriter, header string) *types
 	})
 
 	if err != nil {
-		custom_errors.ReturnHTTPError(w, []string{err.Error()})
+		custom_errors.ReturnUnauthorizedError(w, []string{"Invalid or expired token"})
 		return nil
 	}
 
