@@ -1,7 +1,7 @@
 package types
 
 import (
-	"github.com/educolog7/helpers/enums"
+	"github.com/educolog9/helpers/enums"
 	"github.com/golang-jwt/jwt"
 )
 

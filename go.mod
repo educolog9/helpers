@@ -1,5 +1,5 @@
-module github.com/educolog7/helpers
+module github.com/educolog9/helpers
 
 go 1.22.0
 
-require github.com/golang-jwt/jwt v3.2.2+incompatible // indirect
+require github.com/golang-jwt/jwt v3.2.2+incompatible

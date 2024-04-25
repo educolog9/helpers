@@ -5,8 +5,8 @@ import (
 	"os"
 	"strings"
 
-	custom_errors "github.com/educolog7/helpers/errors"
-	"github.com/educolog7/helpers/types"
+	custom_errors "github.com/educolog9/helpers/errors"
+	"github.com/educolog9/helpers/types"
 	"github.com/golang-jwt/jwt"
 )
 
