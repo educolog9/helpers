@@ -15,6 +15,8 @@ type UserClaims struct {
 	Roles          []enums.Role `json:"roles"`
 	IsConfirmed    bool         `json:"isConfirmed"`
 	IsBlocked      bool         `json:"isBlocked"`
+	Group          string       `json:"group"`
+	OrganizationID string       `json:"organization"`
 	jwt.StandardClaims
 }
 
