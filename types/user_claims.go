@@ -59,3 +59,23 @@ func (uc *UserClaims) IsEditor() bool {
 	}
 	return false
 }
+
+// IsDirectorRRHH checks if the user has the director_rrhh role.
+func (uc *UserClaims) IsDirectorRRHH() bool {
+	for _, role := range uc.Roles {
+		if role == enums.DirectorRRHH || role == enums.Admin {
+			return true
+		}
+	}
+	return false
+}
+
+// IsCoordinatorRRHH checks if the user has the coordinator_rrhh role.
+func (uc *UserClaims) IsCoordinatorRRHH() bool {
+	for _, role := range uc.Roles {
+		if role == enums.CoordinatorRRHH || role == enums.DirectorRRHH || role == enums.Admin {
+			return true
+		}
+	}
+	return false
+}
