@@ -101,3 +101,21 @@ const (
 	// @description AZUL payment method
 	AZUL PaymentMethod = "azul"
 )
+
+type LogStatus string
+
+const (
+	LOG_STATUS_PENDING LogStatus = "failed"
+
+	LOG_STATUS_COMPLETED LogStatus = "completed"
+)
+
+type EventType string
+
+const (
+	EVENT_TYPE_EDUCOLOGY EventType = "educology"
+
+	EVENT_TYPE_STRIPE EventType = "stripe"
+
+	EVENT_TYPE_PAYPAL EventType = "paypal"
+)
