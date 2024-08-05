@@ -14,5 +14,6 @@ type SubscriptionAccess struct {
 	Categories     []primitive.ObjectID         `bson:"categories"`
 	AccessType     enums.SubscriptionAccessType `bson:"accessType"`
 	Version        int                          `bson:"version"`
+	CreatedAt      time.Time                    `bson:"createdAt"`
 	UpdatedAt      time.Time                    `bson:"updatedAt"`
 }
