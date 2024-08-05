@@ -64,3 +64,40 @@ const (
 	// @description Subscription access automatically granted through the payment system
 	SystemAuto SubscriptionAccessType = "system_auto"
 )
+
+// PaymentStatus represents the status of a payment.
+// @name PaymentStatus
+type PaymentStatus string
+
+const (
+
+	// PENDING represents a pending payment
+	// @description Pending payment
+	PENDING PaymentStatus = "pending"
+
+	// PAID represents a paid payment
+	// @description Paid payment
+	PAID PaymentStatus = "paid"
+
+	// FAILED represents a failed payment
+	// @description Failed payment
+	FAILED PaymentStatus = "failed"
+)
+
+// PaymentMethod represents the payment method of a transaction.
+// @name PaymentMethod
+type PaymentMethod string
+
+const (
+	// PAYPAL represents the PAYPAL payment method
+	// @description PAYPAL payment method
+	PAYPAL PaymentMethod = "paypal"
+
+	// STRIPE represents the STRIPE payment method
+	// @description STRIPE payment method
+	STRIPE PaymentMethod = "stripe"
+
+	// AZUL represents the AZUL payment method
+	// @description AZUL payment method
+	AZUL PaymentMethod = "azul"
+)
