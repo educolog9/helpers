@@ -105,7 +105,9 @@ const (
 type LogStatus string
 
 const (
-	LOG_STATUS_PENDING LogStatus = "failed"
+	LOG_STATUS_PENDING LogStatus = "pending"
+
+	LOG_STATUS_FAILED LogStatus = "failed"
 
 	LOG_STATUS_COMPLETED LogStatus = "completed"
 )
