@@ -11,6 +11,7 @@ type Subscription struct {
 	OrganizationID primitive.ObjectID `bson:"organizationId"`
 	PaymentMethod  string             `bson:"paymentMethod"`
 	ExternalID     string             `bson:"externalId"`
+	PlanId         primitive.ObjectID `bson:"planId"`
 	CreatedAt      time.Time          `bson:"createdAt"`
 	NextPayment    bool               `bson:"nextPayment"`
 	Version        int                `bson:"version"`

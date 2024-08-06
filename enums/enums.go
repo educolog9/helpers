@@ -121,3 +121,15 @@ const (
 
 	EVENT_TYPE_PAYPAL EventType = "paypal"
 )
+
+type PlanStatus string
+
+const (
+	// Published represents a published plan
+	// @description Published plan
+	PlanPublished PlanStatus = "published"
+
+	// Unpublished represents an unpublished plan
+	// @description Unpublished plan
+	PlanUnpublished PlanStatus = "unpublished"
+)
