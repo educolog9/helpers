@@ -25,4 +25,5 @@ type User struct {
 	MicroLessons         int                `bson:"microLessons"`
 	GroupName            string             `bson:"groupName"`
 	CreatedAt            time.Time          `bson:"createdAt"`
+	StripeCustomerId     string             `bson:"stripeCustomerId"`
 }
