@@ -1,6 +1,6 @@
 module github.com/educolog9/helpers
 
-go 1.22.0
+go 1.25.0
 
 require (
 	github.com/go-playground/locales v0.14.1
